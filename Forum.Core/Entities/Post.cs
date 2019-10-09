@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Forum.Infrastructure
+namespace Forum.Core.Entities
 {
-    public class Class1
+    public class Post
     {
+        public Guid Id { get; protected set; }
     }
 }
