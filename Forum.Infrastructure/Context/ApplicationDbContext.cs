@@ -10,9 +10,10 @@ namespace Forum.Infrastructure.Context
     {
         public ApplicationDbContext(DbConnection connection) : base(connection, false)
         {
-
+            Database.SetInitializer(new DbInitializer());
         }
 
         public DbSet<Post> Posts { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

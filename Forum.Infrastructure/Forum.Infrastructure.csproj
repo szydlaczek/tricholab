@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\ApplicationDbContext.cs" />
+    <Compile Include="Context\DbInitializer.cs" />
     <Compile Include="Ioc\ContainerModule.cs" />
     <Compile Include="Ioc\DbContextModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

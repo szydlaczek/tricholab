@@ -11,7 +11,7 @@ namespace Forum.Web.Controllers
     {
         public HomeController(ApplicationDbContext db)
         {
-
+            
         }
         public ActionResult Index()
         {
