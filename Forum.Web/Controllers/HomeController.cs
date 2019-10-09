@@ -1,4 +1,5 @@
 ﻿using Forum.Infrastructure.Context;
+using Forum.Infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,14 @@ namespace Forum.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public HomeController(ApplicationDbContext db)
+        private readonly PostService _postService;
+        public HomeController(PostService postService)
         {
-            
+            _postService = postService;
         }
         public ActionResult Index()
         {
+            _postService.GetPosts();
             return View();
         }
 

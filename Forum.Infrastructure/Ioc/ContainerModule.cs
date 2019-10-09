@@ -12,6 +12,7 @@ namespace Forum.Infrastructure.Ioc
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterModule<DbContextModule>();
+            builder.RegisterModule<ServicesModule>();
         }
     }
 }
