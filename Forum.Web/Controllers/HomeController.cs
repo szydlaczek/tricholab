@@ -10,14 +10,14 @@ namespace Forum.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly PostService _postService;
-        public HomeController(PostService postService)
+        private readonly TopicService _postService;
+        public HomeController(TopicService postService)
         {
             _postService = postService;
         }
         public ActionResult Index()
         {
-            _postService.GetPosts();
+            var result = _postService.GetPosts();
             return View();
         }
 
