@@ -31,5 +31,20 @@ namespace Forum.Web
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
+        protected void Application_Error()
+        {
+            HttpContext httpContext = HttpContext.Current;
+            if (httpContext != null)
+            {
+                RequestContext requestContext = ((MvcHandler)httpContext.CurrentHandler).RequestContext;
+                if (requestContext.HttpContext.Request.IsAjaxRequest())
+                {
+                }
+                else
+                {
+                    httpContext.Response.Redirect("~/Error/NoPageFound");
+                }
+            }
+        }
     }
 }

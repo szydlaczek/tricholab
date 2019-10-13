@@ -11,13 +11,13 @@ namespace Forum.Core.Entities
             Topics = new HashSet<Topic>();
         }
 
-        public Category(Guid Id, string name) : this()
+        public Category(Guid id, string name) : this()
         {
             Id = id;
             Name = name;
         }
 
-        public Guid id { get; protected set; }
+        public Guid Id { get; protected set; }
         public string Name { get; protected set; }
         public ICollection<Topic> Topics { get; protected set; }
     }

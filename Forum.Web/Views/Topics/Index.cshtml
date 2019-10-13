@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3>Topics</h3>
+<div ng-controller="Topics" >
+    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+        <div class="input-group">
+            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" ng-model="searchText">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" ng-click="search()">
+                    <i class="fas fa-search fa-sm"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    
+    <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th ng-click="sort('Title')">Title</th>
+                    <th ng-click="sort('Category')">Category</th>
+                    <th ng-click="sort('CreatedBy')">CreatedBy</th>
+                    <th>Answers</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="model in data | orderBy:sortParam:IsReverse">
+                    <td>{{model.Title}}</td>
+                    <td>{{model.Category}}</td>
+                    <td>{{model.CreatedBy}}</td>
+                    <td>{{model.Answers}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/customJs/HomeIndexController.js"></script>
