@@ -20,7 +20,7 @@ namespace Forum.Web.Controllers
         [HttpGet]
         public JsonResult GetTopics(string searchText)
         {
-            var result = _topicsService.GetPosts();
+            var result = _topicsService.GetPosts(searchText);
             return Json(result, JsonRequestBehavior.AllowGet);
         }
     }

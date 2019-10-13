@@ -1,6 +1,4 @@
-﻿
-using Effort;
-using Forum.Core.Entities;
+﻿using Forum.Core.Entities;
 using System.Data.Common;
 using System.Data.Entity;
 
@@ -18,7 +16,6 @@ namespace Forum.Infrastructure.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Topic> Topics { get; set; }
 
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Topic>().HasMany(d => d.Posts)
@@ -27,7 +24,6 @@ namespace Forum.Infrastructure.Context
 
             modelBuilder.Entity<Category>().HasMany(t => t.Topics)
                 .WithRequired(a => a.Category);
-                         
 
             base.OnModelCreating(modelBuilder);
         }

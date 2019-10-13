@@ -12,6 +12,7 @@ namespace Forum.Infrastructure.ModelsPreview
         public int Answers { get; set; }
         public string CreatedBy { get; set; }
         public string Category { get; set; }
+
         public static Expression<Func<Topic, TopicModelPreview>> Projection
         {
             get

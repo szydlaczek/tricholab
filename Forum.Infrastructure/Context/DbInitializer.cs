@@ -17,10 +17,10 @@ namespace Forum.Infrastructure.Context
             var categoryCplusplus = new Category(Guid.Parse("059442c4-7243-49f3-a809-20e0431c1563"), "C++");
 
             var post1 = new Post(Guid.Parse("c50662ab-0354-4ad4-8b1a-35171a807201"), "Treść posta 1", user);
-            var topic1 = new Topic(Guid.Parse("c50662ab-0354-4ad4-8b1a-35171a807202"), categoryWebmastering, "Znacznik div" ,post1);
+            var topic1 = new Topic(Guid.Parse("c50662ab-0354-4ad4-8b1a-35171a807202"), categoryWebmastering, "Znacznik a", post1);
 
             var post2 = new Post(Guid.Parse("c50662ab-0354-4ad4-8b1a-35171a807203"), "Treść posta 2", user1);
-            var topic2 = new Topic(Guid.Parse("c50662ab-0354-4ad4-8b1a-35171a807204"), categoryCsharp, "Znacznik div", post2);
+            var topic2 = new Topic(Guid.Parse("c50662ab-0354-4ad4-8b1a-35171a807204"), categoryCsharp, "Znacznik p", post2);
 
             var post3 = new Post(Guid.Parse("c50662ab-0354-4ad4-8b1a-35171a807205"), "Treść posta 2", user2);
             var topic3 = new Topic(Guid.Parse("c50662ab-0354-4ad4-8b1a-35171a807206"), categoryCplusplus, "Znacznik div", post3);
